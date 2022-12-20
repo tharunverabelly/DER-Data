@@ -1,0 +1,33 @@
+class DER_data:
+
+    def __init__(self,ID,mt_loc,mode,P_Akku,P_Grid,P_Load,P_PV,rel_Autonomy,rel_SelfConsumption,day,per_day, per_month, per_year,s_IP,d_IP,s_port,d_port,ttl):
+        self.ID = ID
+        self.mtloc = mt_loc
+        self.mode = mode
+        self.P_Akku = P_Akku
+        self.P_Grid = P_Grid
+        self.P_Load = P_Load      
+        self.P_PV = P_PV
+        self.rel_Autonomy = rel_Autonomy
+        self.rel_SelfConsumption = rel_SelfConsumption
+        self.day = day
+        self.per_day = per_day
+        self.per_month = per_month
+        self.per_year = per_year
+        self.s_IP = s_IP
+        self.d_IP = d_IP
+        self.s_port = s_port
+        self.d_port = d_port
+        self.ttl = ttl
+        
+
+    def __str__(self):
+        output = "Packet_ID: {}\nLocation: {}\noperationMode: {}\nP_Akku: {}\nP_Grid: {}\nP_Load: {}\nP_PV: {}\nrel_Autonomy: {}\nrel_SelfConsumption: {}\nInverter Day: {}\nE_Day: {}\nE_Total: {}\nE_Year: {}\nSource_IP: {}\nDestination_IP: {}\nSource_Port: {}\nDestination_Port: {}\nTTL: {}ms\n".format(
+            self.ID,self.mtloc,self.mode,self.P_Akku,self.P_Grid,self.P_Load,self.P_PV,self.rel_Autonomy,self.rel_SelfConsumption,self.day,self.per_day,self.per_month,self.per_year,self.s_IP,self.d_IP,self.s_port,self.d_port,self.ttl)
+        return output
+       
+
+# # obj = DER_data
+# # print(obj.Data(1),obj.ip_ports("192.168.10.1"))
+
+
